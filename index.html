@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarkSlides</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="brand">Mark<span>Slides</span></h1>
+    <div class="topbar-actions">
+      <span id="saveStatus" class="status"></span>
+      <button id="saveBtn" class="btn" type="button">Save</button>
+      <button id="presentBtn" class="btn btn-primary" type="button">Present</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="pane editor-pane">
+      <h2 class="pane-title">Markdown</h2>
+      <textarea id="editor" spellcheck="false"></textarea>
+    </section>
+
+    <section class="pane preview-pane">
+      <h2 class="pane-title">Preview</h2>
+      <div class="slide-frame">
+        <div id="previewSlide" class="slide"></div>
+      </div>
+      <div class="controls">
+        <button id="prevBtn" class="btn" type="button">&larr; Left</button>
+        <span id="previewCounter" class="counter">1 / 1</span>
+        <button id="nextBtn" class="btn" type="button">Right &rarr;</button>
+        <button id="previewFsBtn" class="btn" type="button">&#x26F6; Full Screen</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="presentation" class="presentation" hidden>
+    <div class="slide-frame presentation-frame">
+      <div id="presSlide" class="slide"></div>
+    </div>
+    <div class="controls controls-dark">
+      <button id="presPrevBtn" class="btn" type="button">&larr; Left</button>
+      <span id="presCounter" class="counter">1 / 1</span>
+      <button id="presNextBtn" class="btn" type="button">Right &rarr;</button>
+      <button id="presFsBtn" class="btn" type="button">&#x2715; Exit Full Screen</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
